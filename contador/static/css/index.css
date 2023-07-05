@@ -1,0 +1,30 @@
+h1, h3 {
+    text-align: center;
+}
+
+.bonus {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color:indianred;
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10%;
+    color: aliceblue;
+}
+
+.btn2{
+    background-color:seagreen;
+}
+
+.sensei{
+    padding-top: 200px;
+}
+
+.n{
+    width: 40px;
+}

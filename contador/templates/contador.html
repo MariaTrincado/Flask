@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = '/css/index.css')}}">
+</head>
+<body>
+    <h1>
+        Contador
+    </h1>
+    <h3> {{session['contador']}} veces</h3>
+
+    <div class="bonus">
+        <form method="POST" action="/incrementar_2">
+            <button type="submit" class="btn1">
+                agregar +2 visitas
+            </button>
+        </form>
+
+        <form method="GET" action="/destroy_session">
+            <button type="submit" class="btn2">
+                reiniciar contador
+            </button>
+        </form>
+    </div>
+    <div class="bonus">
+        <div class="sensei">
+            <form action="/incrementar_personalizado" method="POST" >
+                <label for="incremento">Incrementar en:</label>
+                <input type="number" id="incremento" name="incremento" min="1" value="1" class="n"> 
+                <button type="submit">Incrementar contador</button>
+            </form>
+        </div>
+    </div>
+    <h3> {{session['visitas_reales']}} veces (reales)</h3>
+
+</body>
+</html>
