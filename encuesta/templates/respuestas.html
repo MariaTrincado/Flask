@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respuestas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Revisa tus respuestas
+        </h1>
+        <ul>
+            {% for respuesta in respuestas %}
+            <li class="respuesta"> Nombre: {{ respuesta["nombre"] }}</li>
+            <li class="respuesta"> País: {{ respuesta["pais"] }} </li>
+            <li class="respuesta"> Lenguaje favorito: {{ respuesta["lenguaje"] }} </li>
+            <li class="respuesta"> Comentario: {{ respuesta["comentario"] }} </li>
+            {% endfor %}
+        </ul>
+        <form method="GET" action="/">
+            <button type="submit">Otra respuesta</button>
+        </form>
+    </div>
+</body>
+</html>

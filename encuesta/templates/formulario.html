@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="/process">
+            <h1>
+                Ficha de postulación
+            </h1>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input class="barra" type="text" id="nombre" name="nombre">
+            </div>
+            <div>
+                <label for="pais">País:</label>
+                <select class="barra" name="pais" id="pais">
+                    <option value="Chile">Chile</option>
+                    <option value="Mexico">México</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="EEUU">EEUU</option>
+                </select>
+            </div>
+            <div>
+                <label for="lenguaje">Lenguaje favorito:</label>
+                <select class="barra" name="lenguaje" id="lenguaje">
+                    <option value="Javascript">Javascript</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+            <div>
+                <label for="comentario">¿Algo que agregar?</label>
+                <textarea class="barra" id="comentario" name="comentario"></textarea>
+            </div>
+            <div>
+                <button type="submit">Enviar respuesta</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
